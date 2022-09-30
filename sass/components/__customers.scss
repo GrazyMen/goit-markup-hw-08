@@ -1,12 +1,18 @@
 .customers__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    @media screen and (min-width: 1199px) {
+            flex-wrap: nowrap;
+        }
+
 }
 
 .customers__item {
-    width: 170px;
+    width: 210px;
     height: 92px;
+  
 }
 
 .customers__link {
@@ -14,7 +20,7 @@
     justify-content: center;
     align-items: center;
     color: var(--social-icon);
-    width: 100%;
+    width: 210px;
     height: 100%;
 
     border: 1px solid #afb1b8;
@@ -28,5 +34,12 @@
      border-color: var(--accent-color);
      color: var(--accent-color);
         }
+                @media screen and (min-width: 768px) {
+                    width: 226px;
+                }
+        
+                @media screen and (min-width: 1199px) {
+                    width: 170px;
+                }
 }
 

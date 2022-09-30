@@ -1,3 +1,4 @@
+
 .button {
     padding: 10px 32px;
     color: var(--background-main-color);
@@ -19,7 +20,15 @@
     list-style: none;
     display: flex;
     justify-content: center;
+
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+     flex-wrap: wrap;
+     justify-content: flex-start;
+    row-gap: 15px;
+    margin-bottom: 30px;
+        }
 }
+
 .button__list li {
     margin-right: 8px;
 }
@@ -27,4 +36,3 @@
 .button__list li:last-child {
     margin-right: 0;
 }
-
