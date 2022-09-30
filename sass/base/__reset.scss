@@ -1,0 +1,61 @@
+body {
+    background-color: var(--background-main-color);
+    color: var(--title-text-color);
+    font-family: roboto, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.visually-hidden {
+    font-size: 0;
+}
+.item-svg {
+    fill: currentColor;
+}
+.section-2 {
+    background-color: var(--background-secondary-color);
+    padding: 94px 0;
+}
+.list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.link {
+    text-decoration: none;
+}
