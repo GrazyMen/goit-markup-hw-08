@@ -11,7 +11,8 @@
   screen and (min-resolution: 192dpi) and (max-width: 767px),
   screen and (min-resolution: 2dppx) and (max-width: 767px) {
       .main__section {
-          background-image: url(../img/mobile/hero2x.jpg);
+          background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+           url(../img/mobile/hero2x.jpg);
       }
   }
   }
@@ -36,12 +37,12 @@
         width: 360px;
     }
 }
-@media screen and (min-width: 320px) and (max-width: 1199px) {
+@media screen and (min-width: 320px){
     .main__section {
         margin: 0 auto;
         padding: 118px 0;
         height: 400px;
-        width: 100%;
+        max-width: 480px;
         text-align: center;
     }
 
@@ -54,11 +55,30 @@
         padding: 10px 24px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .main__section {
+            margin: 0 auto;
+            padding: 118px 0;
+            height: 400px;
+            max-width: 768px;
+            text-align: center;
+        }
+    
+        .main__title {
+            line-height: 1.6;
+            font-size: 26px;
+        }
+    
+        .main__button {
+            padding: 10px 24px;
+        }
+}
 @media screen and (min-width: 1200px) {
     .main__section {
         margin: 0 auto;
         padding: 200px 0;
-        width: 100%;
+        max-width: 1600px;
         height: 600px;
 
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),

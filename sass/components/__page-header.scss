@@ -236,6 +236,7 @@
 }
 .contact__list .contact__link {
     display: flex;
+    justify-content: flex-start;
     gap: 10px;
     color: var(--primary-text-color);
     font-weight: 500;

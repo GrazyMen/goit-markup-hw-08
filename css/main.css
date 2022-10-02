@@ -57,17 +57,13 @@ button {
 }
 
 section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-@media screen and (max-width: 1199px) {
-  section .section {
-    padding: 60px 0px 60px 0px;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
-  section .section {
-    padding: 94px 0px 94px 0px;
+  section {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -401,6 +397,9 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 10px;
   color: var(--primary-text-color);
   font-weight: 500;
@@ -759,23 +758,19 @@ footer .social__link--footer {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  width: 450px;
-  height: 622px;
-  margin-bottom: 30px;
   background-color: var(--background-main-color);
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .team__item {
     width: 354px;
     height: 536px;
-    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1199px) {
   .team__item {
     width: 270px;
     height: 428px;
-    margin-bottom: 0;
   }
 }
 
@@ -867,7 +862,7 @@ footer .social__link--footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 450px;
+  width: 100%;
   height: 120px;
   border-radius: 4px;
   margin-bottom: 30px;
@@ -950,6 +945,16 @@ footer .social__link--footer {
     width: 354px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .benefits__subtitle {
+    width: 270px;
+  }
+}
+
+.benefits__item {
+  height: 224px;
+  margin-bottom: 30px;
+}
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .gallery__item {
@@ -977,7 +982,7 @@ footer .social__link--footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 15px;
+    margin: -15px;
   }
   .gallery__item {
     width: calc((100% - 60px) / 2);
@@ -985,9 +990,6 @@ footer .social__link--footer {
   }
 }
 @media screen and (min-width: 1200px) {
-  .gallery__list {
-    margin: 15px;
-  }
   .gallery__item {
     width: calc((100% - 90px) / 3);
     margin: 15px;
@@ -1016,10 +1018,10 @@ footer .social__link--footer {
 
 .gallery__title {
   color: var(--title-text-color);
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  letter-spacing: 0.06em;
 }
 
 .gallery__subtitle {
@@ -1073,6 +1075,10 @@ footer .social__link--footer {
   width: 100%;
 }
 
+.gallery__item {
+  height: 404px;
+}
+
 .button {
   padding: 10px 32px;
   color: var(--background-main-color);
@@ -1103,6 +1109,7 @@ footer .social__link--footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .button__list {
@@ -1162,7 +1169,8 @@ footer .social__link--footer {
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 2dppx) and (max-width: 767px) {
   .main__section {
-    background-image: url(../img/mobile/hero2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/mobile/hero2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/mobile/hero2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
@@ -1184,12 +1192,28 @@ footer .social__link--footer {
     width: 360px;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 1199px) {
+@media screen and (min-width: 320px) {
   .main__section {
     margin: 0 auto;
     padding: 118px 0;
     height: 400px;
-    width: 100%;
+    max-width: 480px;
+    text-align: center;
+  }
+  .main__title {
+    line-height: 1.6;
+    font-size: 26px;
+  }
+  .main__button {
+    padding: 10px 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main__section {
+    margin: 0 auto;
+    padding: 118px 0;
+    height: 400px;
+    max-width: 768px;
     text-align: center;
   }
   .main__title {
@@ -1204,7 +1228,7 @@ footer .social__link--footer {
   .main__section {
     margin: 0 auto;
     padding: 200px 0;
-    width: 100%;
+    max-width: 1600px;
     height: 600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/desctop/hero1x.png);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/desctop/hero1x.png);
@@ -1296,11 +1320,19 @@ footer .social__link--footer {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  width: 450px;
+  height: 609px;
   padding: 40px;
   background-color: var(--background-main-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (min-width: 1199px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__item {
@@ -1388,7 +1420,7 @@ footer .social__link--footer {
 }
 
 .modal__input {
-  width: 448px;
+  width: 100%;
   height: 40px;
   padding-left: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -1436,7 +1468,7 @@ footer .social__link--footer {
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  width: 448px;
+  width: 100%;
   height: 120px;
   padding: 12px;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1562,6 +1594,8 @@ footer .social__link--footer {
     display: flex;
   }
   .mobile__item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     padding-right: 10px;

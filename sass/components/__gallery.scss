@@ -23,8 +23,9 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        margin: 15px;
+        margin: -15px;
     }
+    
 
     .gallery__item {
         width: calc((100% - 4 * 15px) / 2);
@@ -33,10 +34,6 @@
 }
 
 @media screen and (min-width: 1200px) {
-    .gallery__list {
-        margin: 15px;
-    }
-
     .gallery__item {
         width: calc((100% - 6 * 15px) / 3);
         margin: 15px;
@@ -67,11 +64,12 @@
 }
 
 .gallery__title {
+
     color: var(--title-text-color);
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
 }
 
 .gallery__subtitle {
@@ -116,4 +114,9 @@
 
 .img__portfolio{
     width: 100%;
+}
+
+.gallery__item{
+   
+    height: 404px;
 }
