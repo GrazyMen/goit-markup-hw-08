@@ -26,6 +26,7 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        
     }
     @media screen and (min-width: 1199px) {
         display: flex;
@@ -60,17 +61,25 @@
     color: var(--primary-text-color);
     line-height: 1.71;
     margin-top: 10px;
-   
     @media screen and (min-width: 768px) {
         width: 354px;
+        margin-bottom: 0;
         }
     
     @media screen and (min-width: 1200px) {
      width: 270px;
+    margin-bottom: 0;
     }
   
 }
+.benefits__subtitle:last-child{
+  margin-bottom: 0px;
+}
 .benefits__item{
-    height: 224px;
-  margin-bottom: 30px;
+ margin-bottom: 30px;
+   @media screen and (min-width: 768px) {
+        height: 234px;
+       margin-bottom: 0;
+    }
+
 }

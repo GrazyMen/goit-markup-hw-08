@@ -77,7 +77,7 @@ section {
 
 .section-2 {
   background-color: var(--background-secondary-color);
-  padding: 94px 0;
+  padding: 60px 0;
 }
 @media screen and (max-width: 1199px) {
   .section-2 .section {
@@ -318,7 +318,7 @@ section {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .menu__list .link {
     font-size: 40px;
   }
@@ -415,6 +415,13 @@ section {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
+  .contact__list .contact__link {
+    font-size: 24px;
+    line-height: 40px;
+    padding-bottom: 32px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .contact__list .contact__link {
     font-size: 34px;
     line-height: 40px;
@@ -690,11 +697,12 @@ footer .social__link--footer {
   }
 }
 
-.customers__item {
-  width: 210px;
-  height: 92px;
+@media screen and (min-width: 1199px) {
+  .customers__item {
+    width: 210px;
+    height: 92px;
+  }
 }
-
 .customers__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -754,23 +762,29 @@ footer .social__link--footer {
   }
 }
 
+.team__item:last-child {
+  margin-bottom: 0px;
+}
+
 .team__item {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  background-color: var(--background-main-color);
   margin-bottom: 30px;
+  background-color: var(--background-main-color);
 }
 @media screen and (min-width: 768px) {
   .team__item {
     width: 354px;
     height: 536px;
+    margin-bottom: 0px;
   }
 }
 @media screen and (min-width: 1199px) {
   .team__item {
     width: 270px;
     height: 428px;
+    margin-bottom: 0px;
   }
 }
 
@@ -847,8 +861,13 @@ footer .social__link--footer {
 }
 
 .doing__title {
+  font-style: normal;
   font-weight: 700;
+  font-size: 14px;
   line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   color: #ffffff;
 }
 
@@ -943,17 +962,28 @@ footer .social__link--footer {
 @media screen and (min-width: 768px) {
   .benefits__subtitle {
     width: 354px;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .benefits__subtitle {
     width: 270px;
+    margin-bottom: 0;
   }
 }
 
+.benefits__subtitle:last-child {
+  margin-bottom: 0px;
+}
+
 .benefits__item {
-  height: 224px;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .benefits__item {
+    height: 234px;
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -1075,10 +1105,6 @@ footer .social__link--footer {
   width: 100%;
 }
 
-.gallery__item {
-  height: 404px;
-}
-
 .button {
   padding: 10px 32px;
   color: var(--background-main-color);
@@ -1111,7 +1137,7 @@ footer .social__link--footer {
           justify-content: center;
   margin-bottom: 30px;
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .button__list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1184,7 +1210,8 @@ footer .social__link--footer {
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-width: 768px) and (min-resolution: 2dppx) and (min-width: 768px) {
   .main__section {
-    background-image: url(../img/tablet/hero2x.jpg);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/tablet/hero2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/tablet/hero2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
@@ -1320,13 +1347,18 @@ footer .social__link--footer {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 450px;
+  width: 310px;
   height: 609px;
   padding: 40px;
   background-color: var(--background-main-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1199px) {
   .modal {
@@ -1538,7 +1570,7 @@ footer .social__link--footer {
   color: var(--title-text-color);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 320px) {
   .mobile__list,
 .header__button {
     display: none;
@@ -1558,7 +1590,6 @@ footer .social__link--footer {
             flex-direction: column;
     background-color: var(--background-main-color);
     z-index: 999;
-    overflow-x: scroll;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
     -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1592,6 +1623,8 @@ footer .social__link--footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .mobile__item {
     -ms-flex-wrap: wrap;
